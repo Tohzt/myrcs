@@ -1,0 +1,17 @@
+[System.Console]::Title = "Terminal"
+clear
+echo "Welcome back, Master."
+cd ~/
+Set-Location -Path C:\
+
+# Quickpath - bashrc
+Function bashPath {Set-Location -Path  C:\Users\Steve\Documents\WindowsPowerShell}
+Set-Alias -Name goto_bashrc -Value bashPath
+function editBash {vim C:\Users\Steve\Documents\WindowsPowerShell/profile.ps1}
+Set-Alias -Name edit_bashrc -Value editBash
+
+# Quickpath - vimrc
+Function vimPath {Set-Location -Path  "C:\Program Files\Vim"}
+Set-Alias -Name goto_vimrc -Value vimPath
+function editVim {vim C:\Program Files\Vim/_vimrc}
+Set-Alias -Name edit_vimrc -Value editVim
